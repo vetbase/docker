@@ -19,10 +19,3 @@ EXPOSE 9000
 
 # Run PHP-FPM on container start.
 ENTRYPOINT ["php-fpm", "-F"]
-
-# configure and run start script
-#COPY start.sh /tmp/start.sh
-#RUN cd /tmp; chmod +x start.sh; ./start.sh
-#CMD ["/start.sh"]
-
-#CMD ["/usr/bin/supervisord", "-n"]

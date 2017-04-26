@@ -1,0 +1,7 @@
+FROM nginx:1.10.1-alpine
+
+# use /srv/www instead of /usr/share/nginx/html
+WORKDIR /srv/www
+
+# copy default nginx.conf to image
+COPY lib/nginx.conf /etc/nginx/nginx.conf
