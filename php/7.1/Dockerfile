@@ -14,6 +14,9 @@ COPY lib/www.conf /usr/local/etc/php-fpm.d/www.conf
 # remove build.sh
 RUN rm -f /tmp/build.sh
 
+RUN set -ex && apk --no-cache add postgresql-dev
+RUN docker-php-ext-install pdo pdo_pgsql
+
 # expose ports
 EXPOSE 9000
 
