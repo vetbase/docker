@@ -1,9 +1,9 @@
 #/bin/bash
 
 # install build packages
+apk add --no-cache git=2.12.2-r1
 apk add --no-cache go=1.7.4-r2
-apk add --no-cache git=2.12.1-r0
-apk add --no-cache musl-dev=1.1.16-r6
+apk add --no-cache musl-dev=1.1.16-r8
 
 # setup Go paths
 export GOPATH=/workspace
